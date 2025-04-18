@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I'm Sorry Vanshika 💔</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffe6e6, #ffcccc);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #333;
+      overflow: hidden;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #cc0000;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+
+    .heart {
+      color: red;
+      font-size: 5em;
+      animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    button {
+      margin-top: 40px;
+      padding: 15px 30px;
+      font-size: 1em;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e60000;
+    }
+
+    .flower {
+      position: absolute;
+      top: -50px;
+      font-size: 24px;
+      animation: fall 10s linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="heart">❤️</div>
+  <h1>I'm Really Sorry, Vanshika 😔</h1>
+  <p>I messed up, and I know it. But please know that I truly care about you more than anything.</p>
+  <p>Can we talk and make things right? 🥺</p>
+
+  <button onclick="showSurprise()">Click for a little surprise</button>
+
+  <script>
+    function showSurprise() {
+      alert("🌸 Vanshika, you're the most amazing person ever 🌸\n\nI promise to make it up to you. Let's talk?");
+    }
+
+    // Generate falling flowers
+    function createFlower() {
+      const flower = document.createElement("div");
+      flower.classList.add("flower");
+      flower.innerText = "🌸";
+      flower.style.left = Math.random() * 100 + "vw";
+      flower.style.animationDuration = (5 + Math.random() * 5) + "s";
+      document.body.appendChild(flower);
+
+      setTimeout(() => {
+        flower.remove();
+      }, 10000);
+    }
+
+    setInterval(createFlower, 500);
+  </script>
+
+</body>
+</html>
